@@ -21,6 +21,6 @@
 
 5. **Deploy**
    Branch            - main
-   Root Directory    - backend/api-server-starter
+   Root Directory    - backend
    Build Command     - npm run build:view
    Start Command     - npm start
