@@ -18,3 +18,6 @@
 
 4. **Access the App**  
    Open your browser and visit: [http://localhost:3000](http://localhost:3000)
+
+5. **Deploy Command**
+   ```npm --prefix backend run deploy```
