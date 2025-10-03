@@ -19,5 +19,8 @@
 4. **Access the App**  
    Open your browser and visit: [http://localhost:3000](http://localhost:3000)
 
-5. **Deploy Command**
-   ```npm --prefix backend run deploy```
+5. **Deploy**
+   Branch            - main
+   Root Directory    - backend/api-server-starter
+   Build Command     - npm install
+   Start Command     - npm start
