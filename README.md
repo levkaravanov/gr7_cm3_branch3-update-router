@@ -20,7 +20,7 @@
    Open your browser and visit: [http://localhost:3000](http://localhost:3000)
 
 5. **Deploy**
-   Branch            - main
-   Root Directory    - backend
-   Build Command     - npm run build:view
-   Start Command     - npm start
+   - Branch            - main
+   - Root Directory    - backend
+   - Build Command     - npm run build:view
+   - Start Command     - npm start
