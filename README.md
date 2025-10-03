@@ -33,7 +33,8 @@
 
 4. Backend tests for API V1
 
- ```PASS  tests/job.test.js
+```text
+ PASS  tests/job.test.js
   Job Controller
     ✓ should return all jobs as JSON when GET /api/jobs is called (74 ms)
     ✓ should create a new job when POST /api/jobs is called (15 ms)
@@ -48,11 +49,13 @@ Test Suites: 1 passed, 1 total
 Tests:       8 passed, 8 total
 Snapshots:   0 total
 Time:        0.577 s, estimated 1 s
-Ran all test suites.```
+Ran all test suites.
+```
 
 5. Backend tests for API V2
 
- ```PASS  tests/user.test.js
+```text
+ PASS  tests/user.test.js
   User Auth
     ✓ should signup a new user (164 ms)
     ✓ should login and return a token (141 ms)
@@ -89,7 +92,8 @@ Test Suites: 2 passed, 2 total
 Tests:       12 passed, 12 total
 Snapshots:   0 total
 Time:        1.167 s, estimated 2 s
-Ran all test suites.```
+Ran all test suites.
+```
 
 6. URLs for the deployed APIs and frontend(s)
 
