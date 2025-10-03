@@ -20,9 +20,8 @@ app.use("/api/jobs", jobRouter);
 const viewPath = path.join(__dirname, "view");
 app.use(express.static(viewPath));
 
-// SPA fallback: serve index.html for non-API routes
-app.get("*", (req, res, next) => {
-    if (req.path.startsWith("/api")) return next();
+// SPA fallback: serve index.html for all non-API routes (Express 5 compatible)
+app.get(/^(?!\/api).*/, (req, res) => {
     return res.sendFile(path.join(viewPath, "index.html"));
 });
 
