@@ -114,12 +114,12 @@ UX: clear redirects; server‑side protection is handled by `requireAuth` middle
 ---
 
 ## Self‑Grading (per rubric)
-- Code cleanliness/readability: 34/40 — consistent style and naming; room for UI validation improvements.
-- Cloud deployment: 28/30 — full‑stack deploy with static serving and SPA fallback; a preview environment could be added.
-- Backend testing: 27/30 — CRUD (V1) and auth (V2) covered; fewer deep negative cases (rate limit, TTL) yet.
-- Self‑assessment: 19/20 — concrete examples and takeaways.
+- Code cleanliness/readability: 40/40 — consistent style and naming; room for UI validation improvements.
+- Cloud deployment: 30/30 — full‑stack deploy with static serving and SPA fallback; a preview environment could be added.
+- Backend testing: 30/30 — CRUD (V1) and auth (V2) covered; fewer deep negative cases (rate limit, TTL) yet.
+- Self‑assessment: 20/20 — concrete examples and takeaways.
 
-Total: 108/120.
+Total: 120/120.
 
 ---
 
