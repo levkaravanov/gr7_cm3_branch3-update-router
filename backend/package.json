@@ -7,7 +7,7 @@
     "start": "cross-env NODE_ENV=production node index.js",
     "dev": "cross-env NODE_ENV=development nodemon index.js",
     "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
-    "build:view": "rm -rf view && npm --prefix ../frontend install --no-audit --no-fund && npm --prefix ../frontend run build && mkdir -p view && cp -R ../frontend/dist/* view",
+    "build:view": "rm -rf view && cd ../frontend/ && npm run build && cp -r dist ../backend/view",
     "push": "git add . && git commit -m \"Update frontend build\" && git push",
     "deploy": "npm run build:view && npm run push",
     "data:import": "node seeder",
@@ -20,9 +20,6 @@
     "testEnvironment": "node",
     "globalTeardown": "./tests/teardown.js"
   },
-  "overrides": {
-    "glob": "10.4.2"
-  },
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "colors": "^1.4.0",
@@ -33,6 +30,9 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.18.2",
     "validator": "^13.15.15"
+  },
+  "overrides": {
+    "glob": "10.4.2"
   },
   "devDependencies": {
     "jest": "^30.1.3",
