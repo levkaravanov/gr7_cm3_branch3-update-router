@@ -7,7 +7,7 @@
     "start": "cross-env NODE_ENV=production node index.js",
     "dev": "cross-env NODE_ENV=development nodemon index.js",
     "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
-    "build:view": "rm -rf view && cd ../frontend && npm ci && npm run build && mkdir -p ../backend/view && cp -R dist/* ../backend/view",
+    "build:view": "rm -rf view && cd ../frontend && npm install --no-audit --no-fund && npm run build && mkdir -p ../backend/view && cp -R dist/* ../backend/view",
     "push": "git add . && git commit -m \"Update frontend build\" && git push",
     "deploy": "npm run build:view && npm run push",
     "data:import": "node seeder",
