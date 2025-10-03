@@ -11,6 +11,8 @@ const JobListings = ({ jobs }) => {
           </Link>
           <p>Type: {job.type}</p>
           <p>Company: {job.company.name}</p>
+          <p>Location: {job.location}</p>
+          <p>Salary: {job.salary}</p>
         </div>
       ))}
     </div>

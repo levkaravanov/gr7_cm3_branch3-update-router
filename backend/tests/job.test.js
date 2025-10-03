@@ -13,7 +13,9 @@ const jobs = [
       name: "NewTek Solutions",
       contactEmail: "contact@teksolutions.com",
       contactPhone: "555-555-5555"
-    }
+    },
+    location: "Boston, MA",
+    salary: 150000
   },
   {
     title: "Junior Backend Developer",
@@ -23,7 +25,9 @@ const jobs = [
       name: "Tech Innovators",
       contactEmail: "hr@techinnovators.com",
       contactPhone: "555-555-1234"
-    }
+    },
+    location: "Remote",
+    salary: 45000
   },
 ];
 
@@ -57,7 +61,9 @@ describe("Job Controller", () => {
         name: "Cloud Solutions",
         contactEmail: "jobs@cloudsolutions.com",
         contactPhone: "555-555-6789"
-      }
+      },
+      location: "San Francisco, CA",
+      salary: 130000
     };
 
     await api

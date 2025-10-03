@@ -14,6 +14,8 @@ const EditJobPage = () => {
   const [companyName, setCompanyName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
   const [contactPhone, setContactPhone] = useState("");
+  const [location, setLocation] = useState("");
+  const [salary, setSalary] = useState("");
 
   const navigate = useNavigate();
 
@@ -52,6 +54,8 @@ const EditJobPage = () => {
         setCompanyName(data.company.name);
         setContactEmail(data.company.contactEmail);
         setContactPhone(data.company.contactPhone);
+        setLocation(data.location);
+        setSalary(String(data.salary ?? ""));
       } catch (error) {
         console.error("Failed to fetch job:", error);
         setError(error.message);
@@ -77,6 +81,8 @@ const EditJobPage = () => {
         contactEmail,
         contactPhone,
       },
+      location,
+      salary: Number(salary),
     };
 
     const success = await updateJob(updatedJob);
@@ -138,6 +144,21 @@ const EditJobPage = () => {
             required
             value={contactPhone}
             onChange={(e) => setContactPhone(e.target.value)}
+          />
+          <label>Location:</label>
+          <input
+            type="text"
+            required
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+          />
+          <label>Salary:</label>
+          <input
+            type="number"
+            required
+            min="0"
+            value={salary}
+            onChange={(e) => setSalary(e.target.value)}
           />
           <button>Update Job</button>
         </form>

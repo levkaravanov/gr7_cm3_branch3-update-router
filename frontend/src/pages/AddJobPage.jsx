@@ -8,9 +8,11 @@ const AddJobPage = () => {
   const [companyName, setCompanyName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
   const [contactPhone, setContactPhone] = useState("");
+  const [location, setLocation] = useState("");
+  const [salary, setSalary] = useState("");
 
   const navigate = useNavigate();
- 
+
   const addJob = async (newJob) => {
     try {
       const res = await fetch("/api/jobs", {
@@ -42,6 +44,8 @@ const AddJobPage = () => {
         contactEmail,
         contactPhone,
       },
+      location,
+      salary: Number(salary),
     };
 
     addJob(newJob);
@@ -93,6 +97,21 @@ const AddJobPage = () => {
           required
           value={contactPhone}
           onChange={(e) => setContactPhone(e.target.value)}
+        />
+        <label>Location:</label>
+        <input
+          type="text"
+          required
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+        />
+        <label>Salary:</label>
+        <input
+          type="number"
+          required
+          min="0"
+          value={salary}
+          onChange={(e) => setSalary(e.target.value)}
         />
         <button>Add Job</button>
       </form>
